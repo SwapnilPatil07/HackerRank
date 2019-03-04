@@ -8,8 +8,8 @@ import java.util.regex.*;
 
 /*
 Steps -
-    1. Find closest obstable in 8 direction by iterating throgh list of obstacle. 
-    2. Travel 8 direction from queens location using recursion and stop if obstacle.
+    1. Find closest obstable in 8 direction by iterating throgh list of obstacles. 
+    2. Travel 8 direction from queens location using recursion and stop if obstacle found.
     3. Add count of squares travelled in 8 direction and return result.
 */
 public class Solution {
@@ -94,9 +94,9 @@ public class Solution {
         int southWest = traversePath(n, r_q, c_q, -1, -1, southWestClosest);
         int southEast = traversePath(n, r_q, c_q, -1, 1, southEastClosest);
 
-        /* instead of using recursion - it can be calculated by adding/substracting cols/rows.
-           It will be more faster. I wanted to try it using recursion
+        /* instead of using recursion squares can be calculated by adding/substracting cols/rows.
            e.g north = northClosest[0] = r_q
+           It will be more faster. I wanted to try it using recursion
         */   
 
         System.out.println("north " + north);
